@@ -11,8 +11,7 @@
 </template>
 
 <script>
-	//import HelloWorld from '@/components/HelloWorld.vue'
-	import AsideSide from "@/components/AsideSide.vue"
+	import AsideSide from '@/components/AsideSide.vue'
 	export default {
   name: 'APP',
   components: {
@@ -46,6 +45,8 @@
 		left: 0px;
 		background-color: #42B983;
 		color: #fff;
+		overflow: hidden;
+		overflow-y: auto;
 	}
 	
 	main {
@@ -54,5 +55,7 @@
 		right: 0px;
 		bottom: 0px;
 		left: 220px;
+		overflow: hidden;
+		overflow-y: auto;
 	}
 </style>
