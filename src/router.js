@@ -13,6 +13,7 @@ import Select from './views/Select.vue'
 import Cascader from './views/Cascader.vue'
 import Switch from './views/Switch.vue'
 import Score from './views/Score.vue'
+import QingJia from './views/QingJia.vue'
 
 Vue.use(Router)
 
@@ -67,5 +68,9 @@ export default new Router({
       path: '/score',
       name: 'score',
       component: Score
+    }, {
+      path: '/qingjia',
+      name: 'qingjia',
+      component: QingJia
     }]
 })

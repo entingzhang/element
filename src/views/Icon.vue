@@ -4,7 +4,7 @@
 			<span>Icon 图标</span>
 			<el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
 		</div>
-		<span class="icon-demo" v-for="(item,index) in icons">
+		<span class="icon-demo" v-for="(item,index) in icons" :key="index">
 			<i :class="item"></i><br />
 			<span class="icon-name" v-text="item"></span>
 		</span>

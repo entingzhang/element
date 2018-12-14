@@ -58,16 +58,17 @@
 						}, {
 							title: 'Score 分数',
 							path: 'Score'
-						}]
+						}
+					]
 				}, {
-					title: 'data',
+					title: 'Homework',
 					icon: 'el-icon-document',
 					sub: [{
-						title: 'Table 表格',
-						path: 'Table'
+						title: 'Score 分数',
+						path: 'Score'
 					}, {
-						title: 'Tag 标签',
-						path: 'Tag'
+						title: 'QingJia 标签',
+						path: 'QingJia'
 					}, {
 						title: 'Progress 进度条',
 						path: 'Progress'
@@ -91,6 +92,4 @@
 	}
 </script>
 
-<style>
-
-</style>
+<style></style>

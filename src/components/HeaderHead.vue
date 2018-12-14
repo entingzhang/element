@@ -68,6 +68,6 @@
 
 <style>
 	.el-menu--horizontal>.el-menu-item.is-active {
-		border-bottom: 2px solid #42B983 !important;
+		border-bottom: 1px solid #42B983 !important;
 	}
 </style>
