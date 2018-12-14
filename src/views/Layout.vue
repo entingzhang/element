@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="layout">
 		<h2>Layout布局</h2>
 		<div class="text bg-purple">
 			<p>通过 row 和 col 组件，并通过 col 组件的 span 属性我们就可以自由地组合布局。</p>
@@ -177,6 +177,7 @@
 			<li>hidden-xl-and-down - 当视口在 xl及以下 尺寸时隐藏</li>
 			<li>hidden-xl-and-up - 当视口在 xl及以上 尺寸时隐藏</li>
 		</ul>
+		
 	</div>
 </template>
 
@@ -188,7 +189,7 @@
 </script>
 
 <style>
-	.text {
+	.layout .text {
 		height: 60px;
 		border-radius: 4px;
 		margin: 20px 0px;
@@ -197,35 +198,35 @@
 		color: #42B983;
 	}
 	
-	.el-row {
+	.layout .el-row {
 		margin-bottom: 20px;
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 	
-	.el-col {
+	.layout .el-col {
 		border-radius: 4px;
 	}
 	
-	.bg-purple-dark {
+	.layout .bg-purple-dark {
 		background: #99a9bf;
 	}
 	
-	.bg-purple {
+	.layout .bg-purple {
 		background: #d3dce6;
 	}
 	
-	.bg-purple-light {
+	.layout .bg-purple-light {
 		background: #e5e9f2;
 	}
 	
-	.grid-content {
+	.layout .grid-content {
 		border-radius: 4px;
 		min-height: 36px;
 	}
 	
-	.row-bg {
+	.layout .row-bg {
 		padding: 10px 0;
 		background-color: #f9fafc;
 	}

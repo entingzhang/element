@@ -1,61 +1,55 @@
 <template>
-	<div id="app">
-		<header></header>
-		<aside>
-		<aside-side></aside-side>
-		</aside>
-		<main>
-			<router-view/>
-		</main>
-	</div>
+	<el-container id="app">
+		<el-aside>
+			<aside-side></aside-side>
+		</el-aside>
+		<el-container>
+			<el-header>
+				<header-head></header-head>
+			</el-header>
+			<el-main>
+				<router-view></router-view>
+			</el-main>
+			<el-footer>©CopyRight 2018-2020非凡学院</el-footer>
+		</el-container>
+	</el-container>
 </template>
 
 <script>
 	import AsideSide from '@/components/AsideSide.vue'
+	import HeaderHead from '@/components/HeaderHead.vue'
 	export default {
-  name: 'APP',
-  components: {
-  	AsideSide
-  }
-}
+		name: 'APP',
+		data() {
+			return {}
+		},
+		components: {
+			AsideSide,
+			HeaderHead
+		}
+	}
 </script>
-<style scoped="scoped">
+<style>
 	html,
 	body,
-	#app {
+	#app{
+		margin: 0;
+		padding: 0;
 		width: 100%;
 		height: 100%;
-		margin: 0;
 	}
-	
-	header {
-		width: 100%;
-		height: 50px;
-		position: fixed;
-		top: 0px;
-		left: 0px;
+	#app .el-header {
 		border-bottom: 1px solid #42B983;
 	}
 	
-	aside {
+	#app .el-aside {
 		width: 220px;
-		height: 100%;
-		position: fixed;
-		top: 0px;
-		left: 0px;
 		background-color: #42B983;
 		color: #fff;
-		overflow: hidden;
-		overflow-y: auto;
 	}
-	
-	main {
-		position: fixed;
-		top: 50px;
-		right: 0px;
-		bottom: 0px;
-		left: 220px;
-		overflow: hidden;
-		overflow-y: auto;
+
+	#app .el-footer{
+		display: flex;
+		line-height: 60px;
 	}
 </style>

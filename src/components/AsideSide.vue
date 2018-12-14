@@ -43,6 +43,21 @@
 						}, {
 							title: 'Input 输入框',
 							path: 'Input'
+						}, {
+							title: 'Number 计数器',
+							path: 'Number'
+						}, {
+							title: 'Button 按钮',
+							path: 'Button'
+						}, {
+							title: 'Select 选项',
+							path: 'Select'
+						}, {
+							title: 'Cascader 级联选择',
+							path: 'Cascader'
+						}, {
+							title: 'Score 分数',
+							path: 'Score'
 						}]
 				}, {
 					title: 'data',
