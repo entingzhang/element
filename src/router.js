@@ -14,6 +14,7 @@ import Cascader from './views/Cascader.vue'
 import Switch from './views/Switch.vue'
 import Score from './views/Score.vue'
 import QingJia from './views/QingJia.vue'
+import LeaveApply from './views/LeaveApply.vue'
 
 Vue.use(Router)
 
@@ -72,5 +73,9 @@ export default new Router({
       path: '/qingjia',
       name: 'qingjia',
       component: QingJia
+    }, {
+      path: '/leaveapply',
+      name: 'leaveapply',
+      component: LeaveApply
     }]
 })

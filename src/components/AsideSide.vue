@@ -67,11 +67,11 @@
 						title: 'Score 分数',
 						path: 'Score'
 					}, {
-						title: 'QingJia 标签',
+						title: 'QingJia请假单',
 						path: 'QingJia'
 					}, {
-						title: 'Progress 进度条',
-						path: 'Progress'
+						title: 'LeaveApply 请假申请',
+						path: 'LeaveApply'
 					}]
 				}]
 			}

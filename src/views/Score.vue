@@ -20,7 +20,7 @@
 		<el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="page" :page-sizes="[10, 20, 30, 40]" :page-size="size" layout="total, sizes, prev, pager, next, jumper" :total="total">
 		</el-pagination>
 		<el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
-			<span>这是一段信息</span>
+			<span>确定此操作吗？</span>
 			<span slot="footer" class="dialog-footer">
 		    <el-button @click="dialogVisible = false">取 消</el-button>
 		    <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
