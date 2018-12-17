@@ -6,6 +6,7 @@
 		<el-container>
 			<el-header>
 				<header-head></header-head>
+				<tabs></tabs>
 			</el-header>
 			<el-main>
 				<router-view></router-view>
@@ -18,6 +19,7 @@
 <script>
 	import AsideSide from '@/components/AsideSide.vue'
 	import HeaderHead from '@/components/HeaderHead.vue'
+	import Tabs from '@/components/Tabs.vue'
 	export default {
 		name: 'APP',
 		data() {
@@ -25,7 +27,8 @@
 		},
 		components: {
 			AsideSide,
-			HeaderHead
+			HeaderHead,
+			Tabs
 		}
 	}
 </script>
@@ -39,9 +42,12 @@
 		height: 100%;
 	}
 	#app .el-header {
+		height: 100px!important;
 		border-bottom: 1px solid #42B983;
 	}
-	
+	#app .el-col{
+		border-bottom: 0px;
+	}
 	#app .el-aside {
 		width: 220px;
 		background-color: #42B983;
