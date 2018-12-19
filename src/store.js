@@ -48,6 +48,8 @@ export default new Vuex.Store({
 		},
 		removeTab(state, path) {
 			state.tabs=state.tabs.filter(item=>item.path!=path)
+			//上下两句的意思一样，当箭头前面只有一个元素时候花括号和小括号可以省略，
+//			state.tabs=state.tabs.filter((item)=>{return item.path!=path})
 			if(state.activePath==path){
 				this.state.activePath ='/layout'
 			}
