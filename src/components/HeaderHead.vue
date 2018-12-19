@@ -4,7 +4,7 @@
 			<el-autocomplete prefix-icon="el-icon-search" clearable value-key="name" class="inline-input" v-model="result" :fetch-suggestions="querySearch" placeholder="请输入内容" @select.change="handleSelect"></el-autocomplete>
 		</el-col>
 		<el-col :span="12">
-			<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="select">
+			<el-menu :default-active="activeIndex" class="el-menu-demo hidden-md-and-down" mode="horizontal" @select="select">
 				<el-menu-item index="1">处理中心</el-menu-item>
 				<el-submenu index="2">
 					<template slot="title">我的工作台</template>

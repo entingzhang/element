@@ -1,0 +1,56 @@
+[{
+		"label": "basic",
+		"icon": "el-icon-location",
+		"sub": [{
+				"label": "Layout 布局",
+				"path": "Layout"
+			}, {
+				"label": "Container 布局容器",
+				"path": "Container"
+			}, {
+				"label": "Color 色彩",
+				"path": "Color"
+			}]
+	}, {
+		"label": "form",
+		"icon": "el-icon-menu",
+		"sub": [{
+				"label": "Radio 单选框",
+				"path": "Radio"
+			}, {
+				"label": "Checkbox 多选框",
+				"path": "Checkbox"
+			}, {
+				"label": "Input 输入框",
+				"path": "Input"
+			}, {
+				"label": "Number 计数器",
+				"path": "Number"
+			}, {
+				"label": "Button 按钮",
+				"path": "Button"
+			}, {
+				"label": "Select 选项",
+				"path": "Select"
+			}, {
+				"label": "Cascader 级联选择",
+				"path": "Cascader"
+			}, {
+				"label": "Score 分数",
+				"path": "Score"
+			}]
+	}, {
+		"label": "Homework",
+		"icon": "el-icon-document",
+		"sub": [{
+				"label": "Score 分数",
+				"path": "Score"
+			}, {
+				"label": "QingJia请假单",
+				"path": "QingJia"
+			}, {
+				"label": "LeaveApply 请假申请",
+				"path": "LeaveApply"
+			}]
+	}
+]

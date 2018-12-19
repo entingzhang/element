@@ -9,7 +9,9 @@
 				<tabs></tabs>
 			</el-header>
 			<el-main>
-				<router-view></router-view>
+				<keep-alive>
+					<router-view></router-view>
+				</keep-alive>
 			</el-main>
 			<el-footer>©CopyRight 2018-2020非凡学院</el-footer>
 		</el-container>

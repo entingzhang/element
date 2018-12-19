@@ -3,77 +3,22 @@
 		<el-submenu :index="i+''" v-for="(item,i) in nav">
 			<template slot="title">
 				<i :class="item.icon"></i>
-				<span v-text="item.title"></span>
+				<span v-text="item.label"></span>
 			</template>
 			<el-menu-item-group>
 				<template slot="title"></template>
-				<el-menu-item :index="sub.path" v-for="(sub,j) in nav[i].sub" v-text="sub.title"></el-menu-item>
+				<el-menu-item :index="sub.path" v-for="(sub,j) in nav[i].sub" v-text="sub.label"></el-menu-item>
 			</el-menu-item-group>
 		</el-submenu>
 	</el-menu>
 </template>
 
 <script>
+	import {mapMutations} from "vuex";
 	export default {
 		data() {
 			return {
-				nav: [{
-					title: 'basic',
-					icon: 'el-icon-location',
-					sub: [{
-						title: 'Layout 布局',
-						path: 'Layout'
-					}, {
-						title: 'Container 布局容器',
-						path: 'Container'
-					}, {
-						title: 'Color 色彩',
-						path: 'Color'
-					}]
-				}, {
-					title: 'form',
-					icon: 'el-icon-menu',
-					sub: [{
-							title: 'Radio 单选框',
-							path: 'Radio'
-						},
-						{
-							title: 'Checkbox 多选框',
-							path: 'Checkbox'
-						}, {
-							title: 'Input 输入框',
-							path: 'Input'
-						}, {
-							title: 'Number 计数器',
-							path: 'Number'
-						}, {
-							title: 'Button 按钮',
-							path: 'Button'
-						}, {
-							title: 'Select 选项',
-							path: 'Select'
-						}, {
-							title: 'Cascader 级联选择',
-							path: 'Cascader'
-						}, {
-							title: 'Score 分数',
-							path: 'Score'
-						}
-					]
-				}, {
-					title: 'Homework',
-					icon: 'el-icon-document',
-					sub: [{
-						title: 'Score 分数',
-						path: 'Score'
-					}, {
-						title: 'QingJia请假单',
-						path: 'QingJia'
-					}, {
-						title: 'LeaveApply 请假申请',
-						path: 'LeaveApply'
-					}]
-				}]
+				nav: []
 			}
 		},
 		methods: {
@@ -83,11 +28,31 @@
 			close(key, keyPath) {
 				console.log(key, keyPath)
 			},
+			getTab(path){
+				console.log(path);
+				for(let i=0;i<this.nav.length;i++){
+					for(let j=0;j<this.nav[i].sub.length;j++){
+						if(this.nav[i].sub[j].path==path){
+							return this.nav[i].sub[j];
+						}
+					}
+				}
+				return false;
+			},
+			...mapMutations(['addTab']),
 			select(index, indexPath) {
-				this.$router.push(index);
 				console.log(index);
 				console.log(indexPath);
+//				this.addTab({});
+				const tab = this.getTab(index);
+				if(tab){
+					this.addTab(tab);
+					this.$router.push(index);
+				}
 			}
+		},
+		created(){
+			this.nav=require("../assets/admin.json");
 		}
 	}
 </script>
